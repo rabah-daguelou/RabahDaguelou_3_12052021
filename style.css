@@ -1,0 +1,279 @@
+* {
+  margin: 0px;
+  padding: 0px;
+  font-family: 'Roboto', sans-serif; }
+
+h1, h2 {
+  font-size: 22px;
+  font-weight: 700; }
+
+section {
+  padding: 0px 20px 0px; }
+
+li {
+  list-style: none; }
+
+i {
+  font-size: 22px; }
+
+a, a:visited {
+  text-decoration: none;
+  color: #000; }
+
+footer a, footer a:visited {
+  color: #fff; }
+
+/**** Loader *****/
+.page {
+  opacity: 0;
+  animation: a .5s 3s forwards; }
+
+@keyframes a {
+  0% {
+    opacity: 0; }
+  100% {
+    opacity: 1; } }
+.loader {
+  background: black;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  animation: b .5s 3s forwards; }
+
+@keyframes b {
+  0% {
+    opacity: 1; }
+  100% {
+    opacity: 0; } }
+.loader > .violet {
+  background-color: #9356DC;
+  animation: animer 1s .2s ease-out 3; }
+
+.loader > .rose {
+  background-color: #FF79DA;
+  margin: 0px 20px;
+  animation: animer 1s .4s ease-out 3; }
+
+.loader > .vert {
+  background-color: #99E2D0;
+  animation: animer 1s .6s ease-out 3; }
+
+@keyframes animer {
+  0% {
+    opacity: 0;
+    width: 2px;
+    height: 4px; }
+  25% {
+    opacity: .25;
+    width: 6px;
+    height: 12px; }
+  50% {
+    opacity: .5;
+    width: 10px;
+    height: 20px; }
+  75% {
+    opacity: .75;
+    width: 6px;
+    height: 12px; }
+  100% {
+    opacity: 1;
+    width: 2px;
+    height: 4px; } }
+header {
+  text-align: center; }
+  header img {
+    width: 160px;
+    height: auto;
+    margin: 20px 0px; }
+
+.reserver {
+  padding: 0px;
+  background-color: #f6f6f6;
+  text-align: center; }
+  .reserver__titre {
+    margin-bottom: 20px; }
+  .reserver__decouvrez {
+    margin-bottom: 35px;
+    color: #7d7d7d; }
+  .reserver__bouton {
+    width: 220px;
+    height: 50px;
+    border: none;
+    background: linear-gradient(0deg, #9356DC, #FF79DA);
+    border-radius: 25px;
+    color: #fff;
+    margin-bottom: 60px;
+    box-shadow: 0px 0px 5px #cacaca; }
+  .reserver__ville {
+    height: 50px;
+    background-color: #eaeaea;
+    line-height: 50px;
+    margin-bottom: 45px;
+    border-top: 5px solid #cfcfcf;
+    border-image: linear-gradient(to top, #cfcfcf, #d5d5d5, #dcdcdc, #e3e3e3, #e7e7e7);
+    border-image-slice: 1; }
+    .reserver__ville i {
+      margin-right: 18px; }
+
+/* section 1/ Fonctionnement */
+.fonctionnement h2 {
+  margin: 50px 0px 35px; }
+.fonctionnement ul li {
+  display: flex;
+  align-items: center;
+  background-color: #f6f6f6;
+  border-radius: 15px;
+  height: 75px;
+  margin-bottom: 25px;
+  box-shadow: 0px 0px 10px rgba(232, 232, 232, 0.5); }
+  .fonctionnement ul li:hover {
+    cursor: pointer;
+    background-color: rgba(147, 86, 220, 0.18);
+    box-shadow: 5px 5px 10px #e8e8e8; }
+.fonctionnement__numero {
+  width: 24px;
+  height: 24px;
+  line-height: 24px;
+  background-color: #9356DC;
+  color: #fff;
+  border-radius: 12px;
+  text-align: center;
+  transform: translateX(-12px); }
+.fonctionnement__icone i {
+  margin-right: 20px;
+  color: #7e7e7e; }
+.fonctionnement ul li:hover .fonctionnement__icone i {
+  color: #9356DC; }
+
+/* Section 3/ Restaurants */
+.restaurants {
+  background-color: #f6f6f6;
+  margin: 70px 0px 0px;
+  padding: 60px 0px 65px; }
+  .restaurants h2 {
+    margin: 0px 0px 25px 20px; }
+
+/* Bloc photos */
+.bloc_photo {
+  position: relative;
+  max-width: 90%;
+  height: 250px;
+  margin-bottom: 18px;
+  background-color: #fff;
+  border-radius: 10px;
+  margin: 0 auto 20px;
+  box-shadow: 0px 0px 15px #f2f2f2; }
+  .bloc_photo__nouveau {
+    width: 80px;
+    height: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    position: absolute;
+    top: 14px;
+    right: 14px;
+    background-color: #99E2D0;
+    color: #32b091;
+    font-weight: 600;
+    border-radius: 2px;
+    font-size: 13px; }
+  .bloc_photo img {
+    width: 100%;
+    height: 175px;
+    border-radius: 10px 10px 0px 0px;
+    margin-bottom: 20px;
+    object-fit: cover; }
+  .bloc_photo__titre {
+    margin-top: -12px;
+    margin-left: 15px;
+    line-height: 1.5em; }
+  .bloc_photo__ville {
+    margin-left: 15px;
+    line-height: 1.5em; }
+
+/***** COEUR ******/
+.checkbox {
+  position: absolute;
+  bottom: 30px;
+  right: 25px; }
+  .checkbox input {
+    display: none; }
+  .checkbox:hover {
+    cursor: pointer; }
+  .checkbox:checked + .coeur_vide i {
+    opacity: 0; }
+  .checkbox:checked + .coeur_vide::after {
+    animation: remplir .5s normal 1 forwards; }
+
+.coeur_vide {
+  position: relative;
+  color: #4c4c4c;
+  font-size: 24px; }
+  .coeur_vide::after {
+    font-family: "Font Awesome 5 free";
+    content: "\f004";
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    opacity: 0;
+    font-size: 24px; }
+
+@keyframes remplir {
+  0% {
+    background: linear-gradient(to top, transparent 100%, #9356DC, #FF79DA);
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+    font-weight: 900;
+    opacity: 1; }
+  25% {
+    background: linear-gradient(to top, transparent 75%, #9356DC, #FF79DA);
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+    font-weight: 900;
+    opacity: 1; }
+  50% {
+    background: linear-gradient(to top, transparent 50%, #9356DC, #FF79DA);
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+    font-weight: 900;
+    opacity: 1; }
+  75% {
+    background: linear-gradient(to top, transparent 25%, #9356DC, #FF79DA);
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+    font-weight: 900;
+    opacity: 1; }
+  100% {
+    background: linear-gradient(to top, #9356DC, #FF79DA);
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+    font-weight: 900;
+    opacity: 1; } }
+/*  Footer */
+footer {
+  background-color: #353535;
+  padding: 25px 0px 35px 25px; }
+  footer h2 {
+    font-family: 'Shrikhand', cursive, sans-serif;
+    color: #fff;
+    margin-bottom: 20px;
+    font-size: 20px; }
+  footer i {
+    font-size: 12px;
+    color: #fff;
+    margin-right: 12px; }
+  footer ul li {
+    color: #fff;
+    line-height: 2em;
+    font-size: 18px; }
+
+/*# sourceMappingURL=style.css.map */
