@@ -1,3 +1,5 @@
+/*** Mixin Coeur ****/
+/*** Mixin Footer ****/
 * {
   margin: 0px;
   padding: 0px;
@@ -82,6 +84,7 @@ footer a, footer a:visited {
     opacity: 1;
     width: 2px;
     height: 4px; } }
+/*** Header ***/
 header {
   text-align: center; }
   header img {
@@ -131,7 +134,7 @@ header {
   box-shadow: 0px 0px 10px rgba(232, 232, 232, 0.5); }
   .fonctionnement ul li:hover {
     cursor: pointer;
-    background-color: rgba(147, 86, 220, 0.18);
+    background: #ffdff6;
     box-shadow: 5px 5px 10px #e8e8e8; }
 .fonctionnement__numero {
   width: 24px;
@@ -161,11 +164,10 @@ header {
   position: relative;
   max-width: 90%;
   height: 250px;
-  margin-bottom: 18px;
   background-color: #fff;
   border-radius: 10px;
   margin: 0 auto 20px;
-  box-shadow: 0px 0px 15px #f2f2f2; }
+  box-shadow: 0px 0px 15px #e5e5e5; }
   .bloc_photo__nouveau {
     width: 80px;
     height: 30px;

@@ -1,0 +1,284 @@
+/*** Mixin Coeur ****/
+/*** Mixin Footer ****/
+* {
+  margin: 0px;
+  padding: 0px;
+  font-family: 'Roboto', sans-serif;
+  box-sizing: border-box; }
+
+section h2 {
+  padding: 35px 0px 0px 10px;
+  margin-bottom: 30px;
+  font-size: 16px; }
+
+.page {
+  width: 100%;
+  overflow-x: hidden; }
+
+body {
+  overflow-x: hidden; }
+
+h1 {
+  font-size: 20px;
+  font-weight: 900;
+  font-family: 'Shrikhand', cursive, sans-serif; }
+
+h3 {
+  font-size: 18px;
+  font-weight: 900; }
+
+li {
+  list-style: none; }
+
+i {
+  font-size: 24px; }
+
+header i {
+  color: #000; }
+
+footer a, footer a:visited {
+  text-decoration: none;
+  color: #fff; }
+
+.gras {
+  font-weight: 900; }
+
+/* header */
+header {
+  display: flex;
+  flex-direction: column;
+  margin: 20px 0px 10px;
+  position: relative; }
+
+header .logo {
+  display: flex;
+  align-items: center;
+  margin-left: 22px; }
+
+header .logo img {
+  width: 165px;
+  height: auto;
+  margin: 0px 0px 12px 65px; }
+
+.image img {
+  width: 100%;
+  height: 260px; }
+
+/**** Le corps de la page ****/
+main {
+  padding: 0px 10px;
+  background-color: #f6f6f6; }
+
+.titre {
+  width: 100%;
+  height: 100px;
+  background-color: #f6f6f6;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: absolute;
+  top: 220px;
+  border-radius: 35px 35px 0px 0px; }
+  .titre h1 {
+    margin: 0px 30px 0px 20px;
+    font-size: 30px; }
+
+/**** Le coeur *****/
+.checkbox {
+  position: absolute;
+  bottom: 30px;
+  right: 25px; }
+  .checkbox input {
+    display: none; }
+  .checkbox:hover {
+    cursor: pointer; }
+  .checkbox:checked + .coeur_vide i {
+    opacity: 0; }
+  .checkbox:checked + .coeur_vide::after {
+    animation: remplir .5s normal 1 forwards; }
+
+.coeur_vide {
+  position: relative;
+  color: #4c4c4c;
+  font-size: 24px; }
+  .coeur_vide::after {
+    font-family: "Font Awesome 5 free";
+    content: "\f004";
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    opacity: 0;
+    font-size: 24px; }
+
+@keyframes remplir {
+  0% {
+    background: linear-gradient(to top, transparent 100%, #9356DC, #FF79DA);
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+    font-weight: 900;
+    opacity: 1; }
+  25% {
+    background: linear-gradient(to top, transparent 75%, #9356DC, #FF79DA);
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+    font-weight: 900;
+    opacity: 1; }
+  50% {
+    background: linear-gradient(to top, transparent 50%, #9356DC, #FF79DA);
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+    font-weight: 900;
+    opacity: 1; }
+  75% {
+    background: linear-gradient(to top, transparent 25%, #9356DC, #FF79DA);
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+    font-weight: 900;
+    opacity: 1; }
+  100% {
+    background: linear-gradient(to top, #9356DC, #FF79DA);
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+    font-weight: 900;
+    opacity: 1; } }
+/***** Apparition des sections *********/
+.entrees {
+  opacity: 0;
+  animation: montrer .5s ease-in-out 1s both; }
+
+@keyframes montrer {
+  from {
+    opacity: 0; }
+  to {
+    opacity: 1; } }
+.plats {
+  opacity: 0;
+  animation: montrer .5s ease-in-out 2s both; }
+
+@keyframes montrer {
+  from {
+    opacity: 0; }
+  to {
+    opacity: 1; } }
+.desserts {
+  opacity: 0;
+  animation: montrer .5s ease-in-out 3s both; }
+
+@keyframes montrer {
+  from {
+    opacity: 0; }
+  to {
+    opacity: 1; } }
+/* Section 01*/
+.souligne {
+  padding-bottom: 10px;
+  border-bottom: 3px solid #99E2D0;
+  margin-right: -4px; }
+
+/**** Les cartes ****/
+.carte {
+  display: flex;
+  width: 100%;
+  height: 70px;
+  border-radius: 10px;
+  padding-left: 10px;
+  justify-content: space-between;
+  align-items: flex-end;
+  box-shadow: 5px 5px 5px #e9e9e9;
+  box-sizing: border-box;
+  background-color: #fff;
+  margin-bottom: 15px; }
+  .carte__coche {
+    width: 0px;
+    height: 70px;
+    background-color: #99E2D0;
+    border-radius: 0px 10px 10px 0px;
+    transition: width 1s ease-out;
+    line-height: 70px;
+    text-align: center;
+    transition: width .5s;
+    opacity: 0; }
+  .carte i {
+    color: #fff;
+    transition: transform .5s; }
+  .carte--coche {
+    height: 90px;
+    line-height: 90px; }
+  .carte:hover .carte__coche {
+    width: 60px;
+    text-align: center;
+    opacity: 1; }
+  .carte:hover i {
+    transform: rotate(360deg); }
+  .carte__plat {
+    height: 100%;
+    line-height: 2.5em;
+    margin-bottom: 20px; }
+  .carte--plat1 {
+    height: 90px; }
+  .carte__prix {
+    align-self: flex-end;
+    font-weight: bold;
+    margin-bottom: 10px; }
+
+.titre_plat > .pro {
+  display: block;
+  margin-top: -7px; }
+
+.carte--plat1 > .carte__plat {
+  line-height: 2em;
+  padding-top: 5px; }
+
+.carte__plat > .titre_plat {
+  margin-top: 20px;
+  margin-bottom: -10px; }
+
+.carte__plat > .ingredient_plat, .carte__plat > .titre_plat {
+  width: 300px;
+  transition: width .5s;
+  overflow: hidden;
+  white-space: nowrap; }
+
+.carte:hover > .carte__plat > .ingredient_plat, .carte:hover > .carte__plat > .titre_plat {
+  width: 240px;
+  text-overflow: ellipsis; }
+
+/**** Le bouton ****/
+.commander {
+  text-align: center; }
+
+button {
+  border: none;
+  width: 185px;
+  height: 50px;
+  background: linear-gradient(0deg, #9356DC, #FF79DA);
+  color: #fff;
+  border-radius: 25px;
+  margin: 45px auto 60px;
+  font-size: 16px;
+  font-weight: 900; }
+
+/*  Footer */
+footer {
+  background-color: #353535;
+  padding: 25px 0px 35px 25px; }
+  footer h2 {
+    font-family: 'Shrikhand', cursive, sans-serif;
+    color: #fff;
+    margin-bottom: 20px;
+    font-size: 20px; }
+  footer i {
+    font-size: 12px;
+    color: #fff;
+    margin-right: 12px; }
+  footer ul li {
+    color: #fff;
+    line-height: 2em;
+    font-size: 18px; }
+
+/*# sourceMappingURL=style_menu.css.map */
