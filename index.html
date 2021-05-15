@@ -4,12 +4,12 @@
 <head>
     <meta charset='utf-8'>
     <title>Projet03</title>
+
     <link rel='stylesheet' type='text/css' media='screen' href='style.css'>
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.3/css/all.css">
     <link rel="preconnect" href="https://fonts.gstatic.com">
+	<link href="https://fonts.googleapis.com/css2?family=Shrikhand&display=swap" rel="stylesheet">
 	<link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
-	<link rel="preconnect" href="https://fonts.gstatic.com">
-	<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@900&display=swap" rel="stylesheet">
 	<meta name="viewport" content="width=device-width, initial-scale=1"/>
 </head>
 
@@ -71,25 +71,24 @@
 
 	<!-- Section 3/ Les restaurants / -->
 
-			<section class="restaurants">
-
+			<section class="section2">
 				<h2> Restaurants</h2>
+				<div class="restaurant">
+					<div class="bloc_photo">
+						<div class="bloc_photo__coeur"></div>
+						<p class="bloc_photo__nouveau"> Nouveau </p>
+						<a href="la_palette_du_gout.html"><img src="Maquettes-Ohmyfood/images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg" alt="La palette du goût, Ménilmontant"></a>
+						<h3 class="bloc_photo__titre"> La palette du goût </h3>
+						<p class="bloc_photo__ville"> Ménilmontant </p> 
+						<form class="bloc_photo__checkbox" method="POST" action="#">
+							<label for="coeur1" class="checkbox">
+								<input type="checkbox" id="coeur1" class="checkbox">
+								<span class="coeur_vide"> <i class="far fa-heart"></i></span>
+							</label>
+						</form>
 
-				<div class="bloc_photo">
-					<div class="bloc_photo__coeur"></div>
-					<p class="bloc_photo__nouveau"> Nouveau </p>
-					<a href="la_palette_du_gout.html"><img src="Maquettes-Ohmyfood/images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg" alt="La palette du goût, Ménilmontant"></a>
-					<h3 class="bloc_photo__titre"> La palette du goût </h3>
-					<p class="bloc_photo__ville"> Ménilmontant </p> 
-					<form class="bloc_photo__checkbox" method="POST" action="#">
-						<label for="coeur1" class="checkbox">
-							<input type="checkbox" id="coeur1" class="checkbox">
-							<span class="coeur_vide"> <i class="far fa-heart"></i></span>
-						</label>
-					</form>
-
-				</div>
-				
+					</div>
+					
 					<div class="bloc_photo">
 
 						<div class="bloc_photo__coeur"></div>
@@ -135,7 +134,7 @@
 							</label>
 						</form>
 					</div>
-			
+				</div>
 			</section>
 
 		</main>

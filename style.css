@@ -16,7 +16,7 @@ li {
   list-style: none; }
 
 i {
-  font-size: 22px; }
+  font-size: 24px; }
 
 a, a:visited {
   text-decoration: none;
@@ -131,7 +131,8 @@ header {
   border-radius: 15px;
   height: 75px;
   margin-bottom: 25px;
-  box-shadow: 0px 0px 10px rgba(232, 232, 232, 0.5); }
+  box-shadow: 0px 0px 10px rgba(232, 232, 232, 0.5);
+  padding-right: 10px; }
   .fonctionnement ul li:hover {
     cursor: pointer;
     background: #ffdff6;
@@ -152,11 +153,11 @@ header {
   color: #9356DC; }
 
 /* Section 3/ Restaurants */
-.restaurants {
+.section2 {
   background-color: #f6f6f6;
   margin: 70px 0px 0px;
   padding: 60px 0px 65px; }
-  .restaurants h2 {
+  .section2 h2 {
     margin: 0px 0px 25px 20px; }
 
 /* Bloc photos */
@@ -268,7 +269,7 @@ footer {
     font-family: 'Shrikhand', cursive, sans-serif;
     color: #fff;
     margin-bottom: 20px;
-    font-size: 20px; }
+    font-size: 22px; }
   footer i {
     font-size: 12px;
     color: #fff;
@@ -277,5 +278,28 @@ footer {
     color: #fff;
     line-height: 2em;
     font-size: 18px; }
+
+/*** Medias Queries ***/
+@media screen and (min-width: 991px) {
+  .fonctionnement ul {
+    display: flex;
+    justify-content: space-around; }
+
+  .restaurant {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 40px; }
+
+  .bloc_photo {
+    width: 23.5%; }
+
+  footer h2 {
+    font-size: 40px;
+    text-align: center;
+    margin-bottom: 40px; }
+
+  footer ul {
+    display: flex;
+    justify-content: space-around; } }
 
 /*# sourceMappingURL=style.css.map */
