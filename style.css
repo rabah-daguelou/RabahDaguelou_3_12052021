@@ -280,6 +280,7 @@ footer {
     font-size: 18px; }
 
 /*** Medias Queries ***/
+/** Version Desktop ***/
 @media screen and (min-width: 991px) {
   .fonctionnement ul {
     display: flex;
@@ -301,5 +302,33 @@ footer {
   footer ul {
     display: flex;
     justify-content: space-around; } }
+/* Version Petits ecrans */
+@media screen and (min-width: 769px) and (max-width: 991px) {
+  .fonctionnement ul {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    font-size: .7rem; }
+
+  .fonctionnement ul li {
+    margin-right: 10px; }
+
+  .bloc_photo {
+    width: 60%;
+    margin: 20px auto; }
+
+  h2, footer {
+    text-align: center; } }
+/* Version tablette */
+@media screen and (min-width: 481px) and (max-width: 768px) {
+  .bloc_photo, .fonctionnement ul li {
+    width: 80%;
+    margin: 20px auto; }
+
+  footer {
+    text-align: center; }
+
+  .fonctionnement > h2, .section2 > h2 {
+    margin-left: 10%; } }
 
 /*# sourceMappingURL=style.css.map */

@@ -261,12 +261,32 @@ button {
 	font-size: 16px;
 	font-weight: 900;
 }
+/** Dernier menu */
+
+.menus--delices .carte,.menus--delices .carte__coche {
+	height: 90px;
+  }
+  .menus--delices.carte__plat {
+	margin: 20px 0px;
+  }
+  .menus--delices.carte__prix {
+	margin-bottom: 20px;
+  }
 
 /*  Footer */
 
 @include pied-de-page;
 
-/*** Medias queries **/
+
+
+/***********************************/
+
+/*          Medias Queries          **/
+
+
+/***********************************/
+
+/*** Version Desktop  ***/
 
 @media screen and (min-width:992px) {
 	
@@ -310,30 +330,92 @@ button {
 		background-color:lighten($couleur3,10%);
 		border-radius: 10px;
 	}
-	/**** */
-/*
-.carte__plat>.ingredient_plat,.carte__plat>.titre_plat {
-	width: 80%;
+
+.carte {
+	min-width: 270px;
+	font-size: .8rem;
+	& h3 {
+		font-size: .7rem;
+	}
+  }
+  .carte__plat>.ingredient_plat,.carte__plat>.titre_plat {
+	max-width: 250px;
 	transition: width .5s;
 	overflow: hidden;
 	white-space: nowrap;
   }
   .carte:hover>.carte__plat>.ingredient_plat,.carte:hover>.carte__plat>.titre_plat {
-	width:60%;
+	max-width: 190px;
 	
 	text-overflow: ellipsis;
   }
-
-
-	/** dernier menu **/
-	 .menus--delices .carte,.menus--delices .carte__coche {
-		height: 90px;
-	  }
-	  .menus--delices.carte__plat {
-		margin: 20px 0px;
-	  }
-	  .menus--delices.carte__prix {
-		margin-bottom: 20px;
-	  }
 	@include footer-desktop;
 }
+
+/* Version Petits ecrans  */
+
+@media screen and (min-width:769px) and (max-width: 991px){
+
+	.logo {
+		justify-content: center;
+	}
+	.image img {
+		width: 50%;
+		margin-left: 25%;
+		border-radius: 15px 15px 0px 0px;
+	}
+	.titre h1 {
+		margin-left: 25%;
+	}
+
+	.checkbox {
+		right:25%;
+	}
+	.souligne {
+		margin-left: 20%;
+	}
+	.carte {
+		width: 60%;
+		margin-left: 20%;
+	}
+
+	footer {
+		text-align: center;
+	}
+
+}
+
+/* Version tablette */
+
+@media screen and (min-width: 481px) and (max-width: 768px) {
+
+.logo {
+		justify-content: center;
+	}
+	.image img {
+		width: 80%;
+		margin-left: 10%;
+		border-radius: 15px 15px 0px 0px;
+	}
+	.titre h1 {
+		margin-left: 10%;
+	}
+
+	.checkbox {
+		right:10%;
+	}
+	.souligne {
+		margin-left: 5%;
+	}
+	.carte {
+		width: 90%;
+		margin-left: 5%;
+	}
+
+	footer {
+		text-align: center;
+	}
+
+}
+
+	
