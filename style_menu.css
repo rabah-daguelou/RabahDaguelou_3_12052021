@@ -202,7 +202,8 @@ main {
     line-height: 70px;
     text-align: center;
     transition: width .5s;
-    opacity: 0; }
+    opacity: 0;
+    margin-left: 10px; }
   .carte i {
     color: #fff;
     transition: transform .5s; }
@@ -271,7 +272,7 @@ footer {
     font-family: 'Shrikhand', cursive, sans-serif;
     color: #fff;
     margin-bottom: 20px;
-    font-size: 20px; }
+    font-size: 22px; }
   footer i {
     font-size: 12px;
     color: #fff;
@@ -280,5 +281,76 @@ footer {
     color: #fff;
     line-height: 2em;
     font-size: 18px; }
+
+/*** Medias queries **/
+@media screen and (min-width: 992px) {
+  .logo {
+    justify-content: center; }
+
+  .image img {
+    width: 50%;
+    margin-left: 25%;
+    border-radius: 15px 15px 0px 0px; }
+
+  .titre h1 {
+    margin-left: 25%; }
+
+  .checkbox {
+    right: 25%; }
+
+  .menus {
+    display: flex;
+    justify-content: space-around; }
+
+  .entrees {
+    width: 30%;
+    padding: 0 5px;
+    background-color: #d7c0f2;
+    border-radius: 10px; }
+
+  .plats {
+    width: 30%;
+    padding: 0 5px;
+    background-color: #ffc6ef;
+    border-radius: 10px; }
+
+  .desserts {
+    width: 30%;
+    padding: 0 5px;
+    background-color: #c1ede2;
+    border-radius: 10px; }
+
+  /**** */
+  .carte {
+    width: 90%; }
+
+  .carte__plat > .ingredient_plat, .carte__plat > .titre_plat {
+    width: 80%;
+    transition: width .5s;
+    overflow: hidden;
+    white-space: nowrap; }
+
+  .carte:hover > .carte__plat > .ingredient_plat, .carte:hover > .carte__plat > .titre_plat {
+    width: 60%;
+    text-overflow: ellipsis; }
+
+  /** dernier menu **/
+  .menus--delices .carte, .menus--delices .carte__coche {
+    height: 90px; }
+
+  .menus--delices.carte__plat {
+    margin: 20px 0px; }
+
+  .menus--delices.carte__prix {
+    margin-bottom: 20px; }
+
+  footer h2 {
+    font-size: 40px;
+    text-align: center;
+    margin-bottom: 40px; }
+
+  footer ul {
+    display: flex;
+    justify-content: space-around; } }
 
 /*# sourceMappingURL=style_menu.css.map */
