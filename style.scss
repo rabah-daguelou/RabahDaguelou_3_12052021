@@ -1,3 +1,6 @@
+
+/* Général */
+
 $couleur1:#9356DC;
 $couleur2:#FF79DA;
 $couleur3:#99E2D0;
@@ -13,7 +16,7 @@ $couleur3:#99E2D0;
 
 h1,h2 {
 	font-size: 22px;
-	font-weight:700;
+	font-weight:900;
 }
 
 section {
@@ -48,7 +51,9 @@ header {
           margin: 20px 0px;
        }
       }
-  
+
+/*** Section 01/ Reserver  ***/ 
+
 .reserver {
         padding: 0px;
         background-color: #f6f6f6;
@@ -61,7 +66,8 @@ header {
             &__decouvrez {
                 margin-bottom: 35px;
                 color:#7d7d7d;
-            }    
+            } 
+
             &__bouton {
                     width: 220px;
                     height: 50px;
@@ -72,6 +78,7 @@ header {
                     margin-bottom: 60px;
                     box-shadow: 0px 0px 5px #cacaca;
             }
+
             &__ville {
                     height: 50px;
                     background-color: #eaeaea;
@@ -80,17 +87,20 @@ header {
                     border-top: 5px solid #cfcfcf;
                     border-image: linear-gradient(to top,#cfcfcf,#d5d5d5,#dcdcdc,#e3e3e3,#e7e7e7);
                     border-image-slice:1;
-                       
+                    font-weight: 900;
                         i {
                             margin-right: 18px;
             }
         }
-}    
- /* section 1/ Fonctionnement */
+}  
 
- .fonctionnement  {
+/**** section 02/ Fonctionnement ****/
+
+.fonctionnement  {
+
 	& h2 {margin: 50px 0px 35px;
     }
+
     & ul li {
         display: flex;
         align-items: center;
@@ -107,6 +117,7 @@ header {
             box-shadow:5px 5px 10px rgba(232,232,232,1)
         } 
     }
+
     &__numero {
         width: 24px;
         height: 24px;
@@ -117,18 +128,20 @@ header {
         text-align: center;
         transform: translateX(-12px);
     }
+
     &__icone i{
         margin-right: 20px;
         color: #7e7e7e;
     }
+
     & ul li:hover .fonctionnement__icone i{
         color: $couleur1;
     }
 }
 
-/* Section 3/ Restaurants */   
-    
-.section2 {
+/* Section 03/ Restaurants */   
+   
+.section3 {
 	background-color:#f6f6f6; 
 	margin: 70px 0px 0px;
 	padding: 60px 0px 65px;
@@ -139,6 +152,7 @@ header {
 }
 
 /* Bloc photos */ 
+
 .bloc_photo {
 	position: relative;
 	max-width: 90%;
@@ -146,7 +160,7 @@ header {
 	background-color: #fff;
 	border-radius: 10px;
 	margin: 0 auto 20px;
-	box-shadow: 0px 0px 15px #e5e5e5;
+	box-shadow: 10px 10px 15px #e5e5e5;
     
     &__nouveau {
         width: 80px;
@@ -184,17 +198,27 @@ header {
 }
 
 /***** COEUR ******/
+.checkbox {
+	position: absolute;
+	bottom:45px;
+	right:25px;
+}
+
 @include coeur;
 
 
 /*  Footer */
+
 @include pied-de-page;
    
 /*** Medias Queries ***/
 
-/** Version Desktop ***/
+/** 1/ Version Desktop ***/
 
-@media screen and (min-width:991px) {
+@media screen and (min-width:992px) {
+    header img{
+		width: 365px;
+	}
 
 	.fonctionnement ul {
 		display: flex;
@@ -220,10 +244,13 @@ header {
 	}
 }
 
-/* Version Petits ecrans */
+/* 2/ Version Petits ecrans */
 @media screen and (min-width: 769px) and (max-width: 991px) {
 
-.fonctionnement ul {
+    header>img{
+		width: 365px;
+	}
+    .fonctionnement ul {
 		display: flex;
 		justify-content: space-around;
 		flex-wrap: wrap;
@@ -244,7 +271,7 @@ h2, footer {
     }
 }
 
-/* Version tablette */
+/* 3/ Version tablette */
 
 @media screen and (min-width: 481px) and (max-width: 768px) {
 

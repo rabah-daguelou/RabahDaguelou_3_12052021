@@ -1,5 +1,55 @@
 /*** Mixin Coeur ****/
+.coeur_vide {
+  position: relative;
+  color: #4c4c4c;
+  font-size: 24px; }
+  .coeur_vide::after {
+    font-family: "Font Awesome 5 free";
+    content: "\f004";
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    opacity: 0;
+    font-size: 24px; }
+
+@keyframes remplir {
+  0% {
+    background: linear-gradient(to top, transparent 100%, #9356DC, #FF79DA);
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+    font-weight: 900;
+    opacity: 1; }
+  25% {
+    background: linear-gradient(to top, transparent 75%, #9356DC, #FF79DA);
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+    font-weight: 900;
+    opacity: 1; }
+  50% {
+    background: linear-gradient(to top, transparent 50%, #9356DC, #FF79DA);
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+    font-weight: 900;
+    opacity: 1; }
+  75% {
+    background: linear-gradient(to top, transparent 25%, #9356DC, #FF79DA);
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+    font-weight: 900;
+    opacity: 1; }
+  100% {
+    background: linear-gradient(to top, #9356DC, #FF79DA);
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+    font-weight: 900;
+    opacity: 1; } }
 /*** Mixin Footer ****/
+/* Le footer version desktop et tablettes */
 * {
   margin: 0px;
   padding: 0px;
@@ -62,7 +112,8 @@ header .logo img {
 
 .image img {
   width: 100%;
-  height: 260px; }
+  height: 260px;
+  object-fit: cover; }
 
 /**** Le corps de la page ****/
 main {
@@ -71,84 +122,33 @@ main {
 
 .titre {
   width: 100%;
-  height: 100px;
+  height: 120px;
   background-color: #f6f6f6;
   display: flex;
-  justify-content: space-between;
   align-items: center;
   position: absolute;
-  top: 220px;
-  border-radius: 35px 35px 0px 0px; }
+  top: 260px;
+  border-radius: 35px 35px 0px 0px;
+  justify-content: space-between;
+  padding-right: 30px; }
   .titre h1 {
-    margin: 0px 30px 0px 20px;
-    font-size: 30px; }
+    margin: 40px 30px 40px 20px;
+    font-size: 25px; }
 
 /**** Le coeur *****/
-.checkbox {
-  position: absolute;
-  bottom: 30px;
-  right: 25px; }
-  .checkbox input {
-    display: none; }
-  .checkbox:hover {
-    cursor: pointer; }
-  .checkbox:checked + .coeur_vide i {
-    opacity: 0; }
-  .checkbox:checked + .coeur_vide::after {
-    animation: remplir .5s normal 1 forwards; }
+.checkbox input {
+  display: none; }
+.checkbox:hover {
+  cursor: pointer; }
+.checkbox:checked + .coeur_vide i {
+  opacity: 0; }
+.checkbox:checked + .coeur_vide::after {
+  animation: remplir .5s normal 1 forwards; }
 
-.coeur_vide {
-  position: relative;
-  color: #4c4c4c;
-  font-size: 24px; }
-  .coeur_vide::after {
-    font-family: "Font Awesome 5 free";
-    content: "\f004";
-    position: absolute;
-    top: 0px;
-    left: 0px;
-    opacity: 0;
-    font-size: 24px; }
-
-@keyframes remplir {
-  0% {
-    background: linear-gradient(to top, transparent 100%, #9356DC, #FF79DA);
-    background-clip: text;
-    -webkit-background-clip: text;
-    color: transparent;
-    font-weight: 900;
-    opacity: 1; }
-  25% {
-    background: linear-gradient(to top, transparent 75%, #9356DC, #FF79DA);
-    background-clip: text;
-    -webkit-background-clip: text;
-    color: transparent;
-    font-weight: 900;
-    opacity: 1; }
-  50% {
-    background: linear-gradient(to top, transparent 50%, #9356DC, #FF79DA);
-    background-clip: text;
-    -webkit-background-clip: text;
-    color: transparent;
-    font-weight: 900;
-    opacity: 1; }
-  75% {
-    background: linear-gradient(to top, transparent 25%, #9356DC, #FF79DA);
-    background-clip: text;
-    -webkit-background-clip: text;
-    color: transparent;
-    font-weight: 900;
-    opacity: 1; }
-  100% {
-    background: linear-gradient(to top, #9356DC, #FF79DA);
-    background-clip: text;
-    -webkit-background-clip: text;
-    color: transparent;
-    font-weight: 900;
-    opacity: 1; } }
 /***** Apparition des sections *********/
 .entrees {
   opacity: 0;
+  margin-top: 40px;
   animation: montrer .5s ease-in-out 1s both; }
 
 @keyframes montrer {
@@ -157,6 +157,7 @@ main {
   to {
     opacity: 1; } }
 .plats {
+  margin-top: 40px;
   opacity: 0;
   animation: montrer .5s ease-in-out 2s both; }
 
@@ -166,6 +167,7 @@ main {
   to {
     opacity: 1; } }
 .desserts {
+  margin-top: 40px;
   opacity: 0;
   animation: montrer .5s ease-in-out 3s both; }
 
@@ -193,28 +195,29 @@ main {
   box-sizing: border-box;
   background-color: #fff;
   margin-bottom: 15px; }
+  .carte:hover {
+    cursor: pointer; }
   .carte__coche {
     width: 0px;
     height: 70px;
     background-color: #99E2D0;
     border-radius: 0px 10px 10px 0px;
-    transition: width 1s ease-out;
     line-height: 70px;
     text-align: center;
-    transition: width .5s;
     opacity: 0;
-    margin-left: 10px; }
+    margin-left: 10px;
+    transition: width 1s ease-out; }
   .carte i {
     color: #fff;
     transition: transform .5s; }
   .carte--coche {
     height: 90px;
     line-height: 90px; }
-  .carte:hover .carte__coche {
+  .carte:active .carte__coche {
     width: 60px;
     text-align: center;
     opacity: 1; }
-  .carte:hover i {
+  .carte:active i {
     transform: rotate(360deg); }
   .carte__plat {
     height: 100%;
@@ -245,7 +248,7 @@ main {
   overflow: hidden;
   white-space: nowrap; }
 
-.carte:hover > .carte__plat > .ingredient_plat, .carte:hover > .carte__plat > .titre_plat {
+.carte:active > .carte__plat > .ingredient_plat, .carte:hover > .carte__plat > .titre_plat {
   width: 240px;
   text-overflow: ellipsis; }
 
@@ -263,16 +266,6 @@ button {
   margin: 45px auto 60px;
   font-size: 16px;
   font-weight: 900; }
-
-/** Dernier menu */
-.menus--delices .carte, .menus--delices .carte__coche {
-  height: 90px; }
-
-.menus--delices.carte__plat {
-  margin: 20px 0px; }
-
-.menus--delices.carte__prix {
-  margin-bottom: 20px; }
 
 /*  Footer */
 footer {
@@ -300,20 +293,28 @@ footer {
   .logo {
     justify-content: center; }
 
+  header .logo img {
+    width: 265px; }
+
   .image img {
     width: 50%;
     margin-left: 25%;
     border-radius: 15px 15px 0px 0px; }
 
-  .titre h1 {
-    margin-left: 25%; }
+  .titre {
+    padding-right: 25%; }
+    .titre h1 {
+      margin-left: 25%; }
 
-  .checkbox {
-    right: 25%; }
+  .checkbox:hover + .coeur_vide::after {
+    animation: remplir .5s normal 1 forwards; }
 
   .menus {
     display: flex;
-    justify-content: space-around; }
+    justify-content: space-around;
+    align-items: center;
+    margin-top: -20px;
+    padding-top: 20px; }
 
   .entrees {
     width: 30%;
@@ -335,25 +336,48 @@ footer {
 
   .carte {
     min-width: 270px;
-    font-size: .8rem; }
+    font-size: .9rem; }
     .carte h3 {
-      font-size: .7rem; }
+      font-size: .9rem; }
+
+  .carte:hover .carte__coche {
+    width: 60px;
+    text-align: center;
+    opacity: 1; }
+  .carte:hover i {
+    transform: rotate(360deg); }
 
   .carte__plat > .ingredient_plat, .carte__plat > .titre_plat {
-    max-width: 250px;
+    max-width: 240px;
     transition: width .5s;
     overflow: hidden;
     white-space: nowrap; }
 
   .carte:hover > .carte__plat > .ingredient_plat, .carte:hover > .carte__plat > .titre_plat {
-    max-width: 190px;
+    max-width: 180px;
     text-overflow: ellipsis; }
+
+  /** Dernier menu */
+  .menus--delices .carte, .menus--delices .carte__coche {
+    height: 90px;
+    line-height: 90px; }
+
+  .menus--delices.carte__prix {
+    margin-bottom: 15px; }
+
+  .menus--delices .carte__plat {
+    margin: auto 0; }
+
+  .plats--desktop .titre_plat {
+    margin-top: 10px; }
+
+  .menus--delices .carte__prix {
+    margin-bottom: -15px; }
 
   footer h2 {
     font-size: 40px;
     text-align: center;
     margin-bottom: 40px; }
-
   footer ul {
     display: flex;
     justify-content: space-around; } }
@@ -367,8 +391,10 @@ footer {
     margin-left: 25%;
     border-radius: 15px 15px 0px 0px; }
 
-  .titre h1 {
-    margin-left: 25%; }
+  .titre {
+    padding-right: 25%; }
+    .titre h1 {
+      margin-left: 25%; }
 
   .checkbox {
     right: 25%; }
@@ -392,8 +418,10 @@ footer {
     margin-left: 10%;
     border-radius: 15px 15px 0px 0px; }
 
-  .titre h1 {
-    margin-left: 10%; }
+  .titre {
+    padding-right: 10%; }
+    .titre h1 {
+      margin-left: 10%; }
 
   .checkbox {
     right: 10%; }

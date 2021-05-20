@@ -2,10 +2,10 @@
 @mixin loader {
     .page {
         opacity: 0;
-        animation: a .5s 3s forwards;
+        animation: loading .5s 3s forwards;
       }
       
-      @keyframes a {
+      @keyframes loading {
         0%{
           opacity:0;
         }
@@ -13,6 +13,8 @@
           opacity:1;
         }
       }
+      
+
       .loader {
         background: black;
         width: 100%;
@@ -32,18 +34,18 @@
         }
       }
       
-      .loader>.violet {
+      .loader--violet {
         background-color:$couleur1;
         animation: animer 1s .2s ease-out 3;
       }
       
-      .loader>.rose{
+      .loader--rose{
         background-color:$couleur2;
         margin: 0px 20px;
         animation: animer 1s .4s ease-out 3;
       }
       
-      .loader>.vert {
+      .loader--vert {
         background-color:$couleur3; 
         animation: animer 1s .6s ease-out 3;
       }
@@ -80,14 +82,16 @@
           height: 4px;
         }
       }
-}
+    }
+
 
 /*** Mixin Coeur ****/
+
 @mixin coeur {
+
+  
+
 .checkbox {
-	position: absolute;
-	bottom:30px;
-	right:25px;
 
     & input {
         display: none;
@@ -101,7 +105,12 @@
     &:checked +.coeur_vide::after {
         animation: remplir .5s normal 1 forwards;
     }
+  }
 }
+
+
+  
+
 .coeur_vide {
     position: relative;
     color: #4c4c4c;
@@ -109,7 +118,7 @@
   
   &::after {
         font-family: "Font Awesome 5 free";
-    content:"\f004";
+        content:"\f004";
         position: absolute;
         top: 0px;
         left: 0px;
@@ -159,8 +168,8 @@
         font-weight:900;
         opacity: 1;
     }
-  }
 }
+
 /*** Mixin Footer ****/
 
 @mixin pied-de-page {
@@ -190,15 +199,19 @@
     }
 }
 
+/* Le footer version desktop et tablettes */
+
 @mixin footer-desktop {
-  footer h2 {
-    font-size: 40px;
+  
+  footer {
+
+    & h2 {font-size: 40px;
     text-align: center;
     margin-bottom: 40px;
-  }
-  footer ul {
+    }
+    & ul {
     display: flex;
     justify-content: space-around;
+    }
   }
-  
 }

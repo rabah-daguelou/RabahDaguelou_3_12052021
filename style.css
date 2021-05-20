@@ -1,3 +1,5 @@
+@charset "UTF-8";
+/* Général */
 /*** Mixin Coeur ****/
 /*** Mixin Footer ****/
 * {
@@ -7,7 +9,7 @@
 
 h1, h2 {
   font-size: 22px;
-  font-weight: 700; }
+  font-weight: 900; }
 
 section {
   padding: 0px 20px 0px; }
@@ -28,9 +30,9 @@ footer a, footer a:visited {
 /**** Loader *****/
 .page {
   opacity: 0;
-  animation: a .5s 3s forwards; }
+  animation: loading .5s 3s forwards; }
 
-@keyframes a {
+@keyframes loading {
   0% {
     opacity: 0; }
   100% {
@@ -50,16 +52,16 @@ footer a, footer a:visited {
     opacity: 1; }
   100% {
     opacity: 0; } }
-.loader > .violet {
+.loader--violet {
   background-color: #9356DC;
   animation: animer 1s .2s ease-out 3; }
 
-.loader > .rose {
+.loader--rose {
   background-color: #FF79DA;
   margin: 0px 20px;
   animation: animer 1s .4s ease-out 3; }
 
-.loader > .vert {
+.loader--vert {
   background-color: #99E2D0;
   animation: animer 1s .6s ease-out 3; }
 
@@ -92,6 +94,7 @@ header {
     height: auto;
     margin: 20px 0px; }
 
+/*** Section 01/ Reserver  ***/
 .reserver {
   padding: 0px;
   background-color: #f6f6f6;
@@ -117,11 +120,12 @@ header {
     margin-bottom: 45px;
     border-top: 5px solid #cfcfcf;
     border-image: linear-gradient(to top, #cfcfcf, #d5d5d5, #dcdcdc, #e3e3e3, #e7e7e7);
-    border-image-slice: 1; }
+    border-image-slice: 1;
+    font-weight: 900; }
     .reserver__ville i {
       margin-right: 18px; }
 
-/* section 1/ Fonctionnement */
+/**** section 02/ Fonctionnement ****/
 .fonctionnement h2 {
   margin: 50px 0px 35px; }
 .fonctionnement ul li {
@@ -152,12 +156,12 @@ header {
 .fonctionnement ul li:hover .fonctionnement__icone i {
   color: #9356DC; }
 
-/* Section 3/ Restaurants */
-.section2 {
+/* Section 03/ Restaurants */
+.section3 {
   background-color: #f6f6f6;
   margin: 70px 0px 0px;
   padding: 60px 0px 65px; }
-  .section2 h2 {
+  .section3 h2 {
     margin: 0px 0px 25px 20px; }
 
 /* Bloc photos */
@@ -168,7 +172,7 @@ header {
   background-color: #fff;
   border-radius: 10px;
   margin: 0 auto 20px;
-  box-shadow: 0px 0px 15px #e5e5e5; }
+  box-shadow: 10px 10px 15px #e5e5e5; }
   .bloc_photo__nouveau {
     width: 80px;
     height: 30px;
@@ -212,6 +216,9 @@ header {
   .checkbox:checked + .coeur_vide::after {
     animation: remplir .5s normal 1 forwards; }
 
+@media screen and (min-width: 992px) {
+  .checkbox:hover + .coeur_vide::after {
+    animation: remplir .5s normal 1 forwards; } }
 .coeur_vide {
   position: relative;
   color: #4c4c4c;
@@ -280,8 +287,11 @@ footer {
     font-size: 18px; }
 
 /*** Medias Queries ***/
-/** Version Desktop ***/
-@media screen and (min-width: 991px) {
+/** 1/ Version Desktop ***/
+@media screen and (min-width: 992px) {
+  header img {
+    width: 365px; }
+
   .fonctionnement ul {
     display: flex;
     justify-content: space-around; }
@@ -302,8 +312,11 @@ footer {
   footer ul {
     display: flex;
     justify-content: space-around; } }
-/* Version Petits ecrans */
+/* 2/ Version Petits ecrans */
 @media screen and (min-width: 769px) and (max-width: 991px) {
+  header > img {
+    width: 365px; }
+
   .fonctionnement ul {
     display: flex;
     justify-content: space-around;
@@ -319,7 +332,7 @@ footer {
 
   h2, footer {
     text-align: center; } }
-/* Version tablette */
+/* 3/ Version tablette */
 @media screen and (min-width: 481px) and (max-width: 768px) {
   .bloc_photo, .fonctionnement ul li {
     width: 80%;
