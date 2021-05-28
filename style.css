@@ -110,9 +110,20 @@ header {
     border: none;
     background: linear-gradient(0deg, #9356DC, #FF79DA);
     border-radius: 25px;
-    color: #fff;
     margin-bottom: 60px;
     box-shadow: 0px 0px 5px #cacaca; }
+    .reserver__bouton a{
+      display: inline-block;
+      width: 220px;
+      height: 50px;
+      color: #fff;
+      line-height: 50px;
+    }
+    
+    .reserver__bouton:hover {
+      box-shadow: 5px 5px 5px #cacaca;
+      background: linear-gradient(0deg, #965cdd, #ff8dde);
+    }
   .reserver__ville {
     height: 50px;
     background-color: #eaeaea;
@@ -121,9 +132,20 @@ header {
     border-top: 5px solid #cfcfcf;
     border-image: linear-gradient(to top, #cfcfcf, #d5d5d5, #dcdcdc, #e3e3e3, #e7e7e7);
     border-image-slice: 1;
-    font-weight: 900; }
+    font-weight: 900; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: nowrap;}
     .reserver__ville i {
       margin-right: 18px; }
+    .reserver__ville input {
+      outline: none;
+      border:none;
+      background-color:#eaeaea; 
+      margin-left: 10px;
+      font-weight: bold;
+    }
 
 /**** section 02/ Fonctionnement ****/
 .fonctionnement h2 {
