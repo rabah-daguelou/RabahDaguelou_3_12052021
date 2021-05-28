@@ -122,7 +122,8 @@ header {
     
     .reserver__bouton:hover {
       box-shadow: 5px 5px 5px #cacaca;
-      background: linear-gradient(0deg, #965cdd, #ff8dde);
+      background: linear-gradient(0deg, #cb4cc2, #ffbbeb);
+      text-shadow: 1px 1px 1px #972c90;
     }
   .reserver__ville {
     height: 50px;
