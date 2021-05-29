@@ -142,6 +142,9 @@ main {
   display: none; }
 .checkbox:hover {
   cursor: pointer; }
+  .coeur_vide i {
+    padding: 2px;
+  }
 .checkbox:checked + .coeur_vide i {
   opacity: 0; }
 .checkbox:checked + .coeur_vide::after {
@@ -198,23 +201,14 @@ main {
   background-color: #fff;
   margin-bottom: 15px; }
 
-/* Check carte 
-.carte-check input {
+
+/* fin check-carte */
+input[type=checkbox] {
   display: none;
 }
-.carte-check:checked.carte__coche{
-     width: 60px;
-    text-align: center;
-    opacity: 1; }
-
-  .carte-check:checked i {
-    transform: rotate(360deg); }
+label span {
+  display: block;
 }
-.carte-check:checked>.carte__plat >.ingredient_plat, .carte:hover > .carte__plat > .titre_plat {
-  max-width: 80%;
-  text-overflow: ellipsis; }
-/* fin check-carte */
-
   .carte:hover {
     cursor: pointer; }
   .carte__coche {
@@ -235,25 +229,31 @@ main {
     /*****/
 
    
-  .carte:active .carte__coche {
+input[type=checkbox]:checked ~.carte__coche {
     width: 60px;
     text-align: center;
     opacity: 1; }
-  .carte:active i {
+
+ input[type=checkbox]:checked ~.carte i {
     transform: rotate(360deg); }
+  
   .carte__plat {
     width:80%;
     height: 100%;
     line-height: 2.5em;
     margin-bottom: 20px; }
-  .carte--plat1 {
-    height: 90px; }
+    
+    .carte--plat1 {
+      height: 90px; }
+      
   .carte__prix {
     align-self: flex-end;
     font-weight: bold;
     margin-bottom: 10px; 
     }
-
+.titre_plat {
+  font-weight: bold;
+}
 .titre_plat > .pro {
   display: block;
   margin-top: -7px; }
@@ -272,7 +272,7 @@ main {
     overflow: hidden;
     white-space: nowrap; }
 
-  .carte:active > .carte__plat > .ingredient_plat, .carte:active> .carte__plat > .titre_plat {
+input[type=checkbox]:checked ~.carte__plat > .ingredient_plat, input[type=checkbox]:checked ~.carte__plat > .titre_plat {
     max-width:240px;
     text-overflow: ellipsis;
      } 
@@ -480,7 +480,8 @@ footer {
     text-align: center; } }
 
 @media screen and (max-width: 375px) {
-  .carte:active > .carte__plat > .ingredient_plat, .carte:active> .carte__plat > .titre_plat {
+  input[type=checkbox]:checked ~.carte__plat > .ingredient_plat, input[type=checkbox]:checked ~.carte__plat > .titre_plat {
+    
     max-width: 200px;
     } 
 }
