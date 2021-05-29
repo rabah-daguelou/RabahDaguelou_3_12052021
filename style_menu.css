@@ -15,39 +15,38 @@
 @keyframes remplir {
   0% {
     background: linear-gradient(to top, transparent 100%, #9356DC, #FF79DA);
-    background-clip: text;
     -webkit-background-clip: text;
-    color: transparent;
+    -webkit-text-fill-color: transparent;
+    
     font-weight: 900;
-    opacity: 1; }
+    opacity: 1; 
+
+  }
   25% {
     background: linear-gradient(to top, transparent 75%, #9356DC, #FF79DA);
-    background-clip: text;
     -webkit-background-clip: text;
-    color: transparent;
+    -webkit-text-fill-color: transparent; 
     font-weight: 900;
     opacity: 1; }
   50% {
     background: linear-gradient(to top, transparent 50%, #9356DC, #FF79DA);
-    background-clip: text;
+    -webkit-text-fill-color: transparent;
     -webkit-background-clip: text;
-    color: transparent;
     font-weight: 900;
     opacity: 1; }
   75% {
     background: linear-gradient(to top, transparent 25%, #9356DC, #FF79DA);
-    background-clip: text;
+    -webkit-text-fill-color: transparent;
     -webkit-background-clip: text;
-    color: transparent;
     font-weight: 900;
     opacity: 1; }
   100% {
     background: linear-gradient(to top, #9356DC, #FF79DA);
-    background-clip: text;
+    -webkit-text-fill-color: transparent;
     -webkit-background-clip: text;
-    color: transparent;
     font-weight: 900;
     opacity: 1; } }
+
 /*** Mixin Footer ****/
 /* Le footer version desktop et tablettes */
 * {
@@ -118,7 +117,10 @@ header .logo img {
 /**** Le corps de la page ****/
 main {
   padding: 0px 10px;
-  background-color: #f6f6f6; }
+  background-color: #f6f6f6; 
+  padding-bottom: 30px;
+
+}
 
 .titre {
   width: 100%;
@@ -277,10 +279,9 @@ main {
 
 
 /**** Le bouton ****/
-.commander {
-  text-align: center; }
 
-button {
+
+.commander {
   border: none;
   width: 185px;
   height: 50px;
@@ -288,26 +289,19 @@ button {
   color: #fff;
   border-radius: 25px;
   text-align: center;
-  margin: 45px auto 60px;
   font-size: 16px;
-  font-weight: 900; }
+  font-weight: 900; 
+  display: block;
+  margin: 45px auto 60px;
+
+}
 
 
-.commander a:hover{
-    border-radius: 25px;
+.commander:hover{
     box-shadow: 5px 5px 5px #cacaca;
     background: linear-gradient(0deg, #cb4cc2, #ffbbeb);
     text-shadow: 1px 1px 1px #972c90;
     }
-
-.commander a{
-      display: inline-block;
-      width: 185px;
-      height: 50px;
-      color: #fff;
-      line-height: 50px;
-    }
-    
 
 /*  Footer */
 footer {
@@ -389,14 +383,8 @@ footer {
   .carte:hover i {
     transform: rotate(360deg); }
 
-  .carte__plat > .ingredient_plat, .carte__plat > .titre_plat {
-    max-width: 240px;
-    transition: width .5s;
-    overflow: hidden;
-    white-space: nowrap; }
-
   .carte:hover > .carte__plat > .ingredient_plat, .carte:hover > .carte__plat > .titre_plat {
-    max-width: 180px;
+    width: 180px;
     text-overflow: ellipsis; }
 
   /** Dernier menu */
@@ -423,6 +411,19 @@ footer {
   footer ul {
     display: flex;
     justify-content: space-around; } }
+
+  @media screen and (min-width: 1100px){
+    .carte:hover > .carte__plat > .ingredient_plat, .carte:hover > .carte__plat > .titre_plat {
+    width: 220px;
+  }}
+  @media screen and (min-width: 1300px){
+    .carte:hover > .carte__plat > .ingredient_plat, .carte:hover > .carte__plat > .titre_plat {
+    width: 240px;
+  }}
+  @media screen and (min-width: 1500px){
+    .carte:hover > .carte__plat > .ingredient_plat, .carte:hover > .carte__plat > .titre_plat {
+    width: 260px;
+  }}
 /* Version Petits ecrans  */
 @media screen and (min-width: 769px) and (max-width: 991px) {
   .logo {

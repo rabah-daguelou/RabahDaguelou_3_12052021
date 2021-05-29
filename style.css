@@ -111,16 +111,13 @@ header {
     background: linear-gradient(0deg, #9356DC, #FF79DA);
     border-radius: 25px;
     margin-bottom: 60px;
-    box-shadow: 0px 0px 5px #cacaca; }
-    .reserver__bouton a{
-      display: inline-block;
-      width: 220px;
-      height: 50px;
-      color: #fff;
-      line-height: 50px;
-    }
+    box-shadow: 0px 0px 5px #cacaca;
+    color: #fff; }
+    
     
     .reserver__bouton:hover {
+      cursor: pointer;
+      border-radius: 25px;
       box-shadow: 5px 5px 5px #cacaca;
       background: linear-gradient(0deg, #cb4cc2, #ffbbeb);
       text-shadow: 1px 1px 1px #972c90;
@@ -258,37 +255,34 @@ header {
 @keyframes remplir {
   0% {
     background: linear-gradient(to top, transparent 100%, #9356DC, #FF79DA);
-    background-clip: text;
     -webkit-background-clip: text;
-    color: transparent;
+    -webkit-text-fill-color: transparent;
     font-weight: 900;
-    opacity: 1; }
+    opacity: 1; 
+
+  }
   25% {
     background: linear-gradient(to top, transparent 75%, #9356DC, #FF79DA);
-    background-clip: text;
     -webkit-background-clip: text;
-    color: transparent;
+    -webkit-text-fill-color: transparent; 
     font-weight: 900;
     opacity: 1; }
   50% {
     background: linear-gradient(to top, transparent 50%, #9356DC, #FF79DA);
-    background-clip: text;
+    -webkit-text-fill-color: transparent;
     -webkit-background-clip: text;
-    color: transparent;
     font-weight: 900;
     opacity: 1; }
   75% {
     background: linear-gradient(to top, transparent 25%, #9356DC, #FF79DA);
-    background-clip: text;
+    -webkit-text-fill-color: transparent;
     -webkit-background-clip: text;
-    color: transparent;
     font-weight: 900;
     opacity: 1; }
   100% {
     background: linear-gradient(to top, #9356DC, #FF79DA);
-    background-clip: text;
+    -webkit-text-fill-color: transparent;
     -webkit-background-clip: text;
-    color: transparent;
     font-weight: 900;
     opacity: 1; } }
 /*  Footer */
