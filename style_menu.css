@@ -206,6 +206,7 @@ main {
 input[type=checkbox] {
   display: none;
 }
+
 label span {
   display: block;
 }
